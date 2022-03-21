@@ -1,0 +1,212 @@
+*{
+    padding:0;
+    margin: 0;
+}
+body{
+    background: lightgrey;
+}
+.wrap{
+    width: 100%;
+    height: 100vh
+}
+.wrap .nav {
+    width: 100%;
+    height: 70px;
+    background: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.active{
+    color:brown
+}
+.wrap .nav .nav__links{
+    width: 25%;
+}
+.wrap .log{
+    color: brown;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+.wrap .nav .nav__links ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-items: center;
+    height: 100%;
+    width: 100%;
+    transition: all .7s ease-in;
+}
+.wrap .nav .nav__links ul li{
+    list-style: none;
+    height: 100%;  
+    padding: 8px 4px 8px 4px;
+}
+.wrap .nav .nav__links ul li:hover{
+    color: brown;
+    border: solid 1px brown;  
+    cursor: pointer;
+    /* padding: 8px 4px 8px 4px; */
+}
+.auth  .signup{
+    padding: 10px;
+}
+.auth  .signin{
+    margin-left: 10px;
+    padding: 10px;
+    color: brown;
+    border: solid 1px brown;
+}
+.auth .signin:hover,.signup:hover{
+    color: white;
+    background: brown;
+    border: solid 1px brown;
+    cursor: pointer;
+}
+.hero__section{
+    width: 100%;
+    height: var(100vh - 70px);
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    z-index: -1000;
+}
+
+.hero__section .content{
+    height: var(100vh - 70px);
+    display: flex;
+    position: absolute;
+    column-gap: 40px;
+    align-content: center;
+}
+.hero__section .content .vector{
+    position: relative;
+    display: flex;
+    align-self: center;
+    width: 50%;
+}
+
+.hero__section .content .vector img {
+    width: 500px;
+    height: 380px;
+    margin-top: 80px;
+    border-radius: 30px;
+}
+
+.hero__section .content .text{
+    margin-top: 100px;
+    display: flex;
+    align-self: center;
+    width: 500px;
+    position: relative;
+}
+.harmbuger{
+    display: none;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 1000px){
+    .wrap {
+        width: 100vw;
+    }
+
+    .wrap .nav{
+        display: flex;
+        flex-direction: column;
+        height: 80px;
+        width: 100vw;
+        column-gap: -20px;
+    }
+    .wrap .nav .nav__links{
+        width: 100%;
+    }
+
+    .wrap .log{
+        margin-top: 150px;
+        align-items: left;
+        margin-left: -70vw;
+    }
+    .wrap .nav .nav__links ul {
+        position: relative;
+        left: -140%;
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        z-index: 100;
+        /* background: brown; */
+        height: fit-content;
+        /* margin-top: 30px; */
+        width: 100vw;
+        padding-bottom: 20px;
+    }
+    .wrap .nav .nav__links ul li {
+        display: flex;
+        align-self: center;
+    }
+    .wrap .nav .auth{
+        position: relative;
+        /* margin-top: -70px; */
+        /* margin-left: -140%; */
+        left: -140%;
+    }
+    .harmbuger{
+        display: flex;
+        flex-direction: column;
+        column-gap: 8px;
+        float: right;
+        margin-top: -170px;
+        margin-right: 25px;
+        cursor: pointer;
+        z-index: 100;
+    }
+    .harmbuger .line{
+        background: rgb(58, 57, 57);
+        width: 30px;
+        border-radius: 5px;
+        height: 5px;
+    }
+    .harmbuger .line:nth-child(2){
+        margin-top: 2px;
+        margin-bottom: 2px;
+    }
+
+    .hero__section .content{
+        height: var(100vh - 80px);
+        display: flex;
+        z-index: -1;
+        flex-direction: column;
+        align-content: center;
+    }
+    .hero__section .content .vector{
+        position: relative;
+        display: flex;
+        width: 100%;
+        /* width: 50%; */
+    }
+    
+    .hero__section .content .vector img {
+        width: 70vw;
+        height: 380px;
+    }
+
+    .hero__section .content .text{
+        display: flex;
+        align-self: center;
+        width: 70vw;
+        position: relative;
+        padding-bottom: 20px;
+    }
+
+
+    .nav .nav__links ul.navopen{
+        margin-top: 4.2rem;
+        position: relative;
+        left: 0;
+        z-index: 1;
+        width: 80vw;
+        background: white;
+        border-bottom: solid 2px brown;
+        border-right: solid 2px brown;
+    }
+}
